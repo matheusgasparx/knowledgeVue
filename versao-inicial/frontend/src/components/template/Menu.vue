@@ -19,7 +19,7 @@ import axios from 'axios'
 export default {
     name: 'Menu',
     components: { Tree },
-    computed: mapState(['isMenuVisible']),
+    computed: mapState(['isMenuVisible']), // aqui seta ele quando clicka sai, e volta no menu
     data: function() {
         return {
             treeFilter: '',

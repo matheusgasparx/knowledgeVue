@@ -22,8 +22,8 @@ import Loading from "@/components/template/Loading"
 
 export default {
 	name: "App",
-	components: { Header, Menu, Content, Footer, Loading },
-	computed: mapState(['isMenuVisible', 'user']),
+	components: { Header, Menu, Content, Footer, Loading }, // declarando todos os components
+	computed: mapState(['isMenuVisible', 'user']), // declarando a sanfona do menu
 	data: function() {
 		return {
 			validatingToken: true
@@ -88,7 +88,7 @@ export default {
 			"menu footer"; /** menu e footer */
 	}
 
-	#app.hide-menu {
+	#app.hide-menu { /* aqui esconde o menu ao ser clickado la no template */
 		grid-template-areas:
 			"header header"
 			"content content"

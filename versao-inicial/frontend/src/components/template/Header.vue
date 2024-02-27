@@ -1,12 +1,12 @@
 <template>
-    <header class="header">
-        <a class="toggle" @click="toggleMenu" v-if="!hideToggle">
-            <i class="fa fa-lg" :class="icon"></i>
+    <header class="header">     <!-- @click ele seta que cada vez que clica ele recolhe -->
+        <a class="toggle" @click="toggleMenu" v-if="!hideToggle">  <!-- toogle setando o SE não estiver escondido então ele ira mostrar, necessario negar -->
+            <i class="fa fa-lg" :class="icon"></i> <!-- class icon é uma propriedade disponivel no componente-->
         </a>
         <h1 class="title">
             <router-link to="/">{{ title }}</router-link>
         </h1>
-        <UserDropdown v-if="!hideUserDropdown" />
+        <UserDropdown v-if="!hideUserDropdown" /> <!-- não esconde o hideuserDropDown -->
     </header>
 </template>
 
@@ -17,18 +17,18 @@ export default {
     name: 'Header',
     components: { UserDropdown },
     props: {
-        title: String,
+        title: String,              // setando o toggle
         hideToggle: Boolean,
         hideUserDropdown: Boolean
     },
     computed: {
-        icon() {
-            return this.$store.state.isMenuVisible ? "fa-angle-left" : "fa-angle-down"
-        }
+        icon() {        //
+            return this.$store.state.isMenuVisible ? "fa-angle-left" : "fa-angle-down" // o menuVisivle ta visivel? se tiver fecha, se não tiver abre
+        }                       // alterna o icone
     },
-    methods: {
+    methods: {          // 
         toggleMenu() {
-            this.$store.commit('toggleMenu')
+            this.$store.commit('toggleMenu') // chama a função togglemenu
         }
     }
 }
@@ -48,7 +48,7 @@ export default {
         font-size: 1.2rem;
         color: #fff;
         font-weight: 100;
-        flex-grow: 1;
+        flex-grow: 1; /* cresce o title junto com o flex container */
         text-align: center;
     }
 
