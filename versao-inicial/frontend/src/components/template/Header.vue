@@ -3,7 +3,7 @@
         <a class="toggle" @click="toggleMenu" v-if="!hideToggle">  <!-- toogle setando o SE não estiver escondido então ele ira mostrar, necessario negar -->
             <i class="fa fa-lg" :class="icon"></i> <!-- class icon é uma propriedade disponivel no componente-->
         </a>
-        <h1 class="title">
+        <h1 class="title">      <!-- aqui insere o titulo, e com router link, seta e altera o titula dependendo da pagina que esta-->
             <router-link to="/">{{ title }}</router-link>
         </h1>
         <UserDropdown v-if="!hideUserDropdown" /> <!-- não esconde o hideuserDropDown -->

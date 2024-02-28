@@ -1,6 +1,8 @@
 <template>
     <div class="content">
-        <router-view></router-view>
+        <router-view>
+            <!-- sempre que selecionar um componente, vai renderizar dentro do router-view -->
+        </router-view>
     </div>
 </template>
 

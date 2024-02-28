@@ -12,6 +12,7 @@
             <i class="fa fa-angle-down"></i>
         </div>
         <div class="user-dropdown-content">
+            <!-- utilizando router-link realiza a navegação no admin ao clickar -->
             <router-link to="/admin" v-if="user.admin">
                 <i class="fa fa-cogs"></i> Administração
             </router-link>
