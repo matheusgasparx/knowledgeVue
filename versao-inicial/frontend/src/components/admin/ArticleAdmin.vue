@@ -68,13 +68,13 @@ export default {
     data: function() {
         return {
             mode: 'save',
-            article: {},
+            article: {}, // serve para alterar, salvar, excluir o artigo
             articles: [],
             categories: [],
-            users: [],
-            page: 1,
-            limit: 0,
-            count: 0,
+            users: [], // lista de users
+            page: 1, // paginação
+            limit: 0, // quantos elementos nas páginas
+            count: 0, // quantas paginas precisa criar o paginador
             fields: [
                 { key: 'id', label: 'Código', sortable: true },
                 { key: 'name', label: 'Nome', sortable: true },

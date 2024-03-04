@@ -8,7 +8,7 @@
                     <b-form-group label="Nome:" label-for="user-name">
                         <b-form-input id="user-name" type="text"
                             v-model="user.name" required
-                            :readonly="mode === 'remove'"
+                            :readonly="mode === 'remove'" 
                             placeholder="Informe o Nome do Usuário..." />
                     </b-form-group>
                 </b-col>
@@ -62,6 +62,7 @@
 
                         <!-- FORMULARIO DA TABELA -->
         <hr>
+            <!-- esse altera o modo no form, ele altera os detalhes ao selecionar ações -->
         <b-table hover striped :items="users" :fields="fields">
             <template slot="actions" slot-scope="data">
                 <b-button variant="warning" @click="loadUser(data.item)" class="mr-2">
@@ -133,7 +134,7 @@ export default {
                 })
                 .catch(showError)
         },
-        loadUser(user, mode = 'save') {
+        loadUser(user, mode = 'save') { // modo padrão é save
             this.mode = mode
             this.user = { ...user }
         }
